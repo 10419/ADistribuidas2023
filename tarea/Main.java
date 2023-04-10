@@ -340,7 +340,7 @@ public class Main {
         
         
         List<Persona> hombres = personas.stream()
-                                        .filter(p -> p.getNombre().equals("Luis"))
+                                        .filter(p -> p.getNombre().equals("M"))
                                         .collect(Collectors.toList());
         long startTime = System.nanoTime();
         hombres.forEach(p -> System.out.println(p.getNombre()));
@@ -349,7 +349,7 @@ public class Main {
         System.out.println("Tiempo de ejecución con programación secuencial: " + ((endTime - startTime)/1_000_000) + " ms");
 
         List<Persona> hombres1 = personas.stream().parallel()
-                                        .filter(p -> p.getNombre().equals("Luis"))
+                                        .filter(p -> p.getNombre().equals("M"))
                                         .collect(Collectors.toList());
         long startTime1 = System.nanoTime();
         hombres1.forEach(p -> System.out.println(p.getNombre()));
